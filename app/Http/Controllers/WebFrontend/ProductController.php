@@ -10,4 +10,12 @@ class ProductController extends Controller
     function productPage($product_id,$shop_id){
         return 'this is product page for product id '.$product_id." for shop id ".$shop_id;
     }
+
+    function productList(){
+        $product_lists=['bag','cow','car','boy','ko'];
+        return view('product',[
+            'products'=>$product_lists
+        ]);
+
+    }
 }

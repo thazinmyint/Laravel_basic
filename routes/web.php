@@ -25,17 +25,11 @@ Route::get('/about',[AboutController::class,'aboutPage']); //laravel8
 
 Route::get('/contact',[ContactController::class,'contactPage']);
 
-Route::get('/products',function(){
-    return view('product');
-});
+Route::get('/products',[ProductController::class,'productList']);
 
 Route::get('/shops',function(){
     return view('shops.shop');
 });
-
-
-
-
 
 
 Route::get('products/{product_id}/shop/{shop_id}',[ProductController::class,'productPage']);
