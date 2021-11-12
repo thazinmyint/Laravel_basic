@@ -18,4 +18,8 @@ class ProductController extends Controller
         ]);
 
     }
+
+    function productDetail($product_id){
+        return 'this is product for product id: '. $product_id;
+    }
 }
