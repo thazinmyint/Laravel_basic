@@ -17,12 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $products = [1,2,3,4,5,6];
-    return view('welcome')->with([
-        'data'=>$products
-    ]);
-});
+Route::get('/home', [Controller::class,'homePage']);
+Route::get('/', [Controller::class,'assignmentPage']);
 
 Route::get('/about',[AboutController::class,'aboutPage'])->name('website.about'); //laravel8
 // Route::get('about','AboutController@aboutPage'); //laravel7
